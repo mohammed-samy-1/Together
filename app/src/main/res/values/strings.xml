@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name">Together</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sp_text"><font color='#2460B9'>{</font>Together<font color='#2460B9'>}</font> we can face....\nDISASTERS</string>
+    <string name="sp_text_2">A believer is like a brick for another believer, the one supporting the other.</string>
+    <string name="welcome">Welcome</string>
+    <string name="enter_your_email_and_password">Enter your email and password</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="forgot_password"><u>Forgot Password?</u></string>
+    <string name="no_account">Don\'t have account? <u><font color='#2460B9'>Sign up</font></u></string>
+    <string name="name">Name</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="create_naccount">Create \nAccount :)</string>
+    <string name="already_have_account_login">Already have account ? <u><font color='#2460B9'>Login</font></u></string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="support">Support</string>
+    <string name="demand">Demand</string>
+    <string name="user_image">user image</string>
+    <string name="location">Location : </string>
+    <string name="bank_account">Bank Account : </string>
+    <string name="phone">Phone : </string>
+    <string name="gender">Gender : </string>
+    <string name="female">Female</string>
+    <string name="rooms">Rooms : </string>
+    <string name="people">People :</string>
+    <string name="upload_picture">Upload picture</string>
+    <string name="Description">Discreption</string>
+    <string name="publish">publish</string>
+    <string name="email1">Email :</string>
+    <string name="password1">Password :</string>
+    <string name="complete">Complete</string>
+    <string name="hints_1">you have to attach picture of you with the people you have hosted</string>
+    <string name="hints_2">Set up a method of payment to facilitate support for you to help with hosting expenses</string>
+    <string name="profile">profile</string>
+    <string name="notifications">Notifications</string>
+    <string name="request">Request</string>
+
+    <string-array name="numbers">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="Genders">
+        <item>any</item>
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+</resources>
