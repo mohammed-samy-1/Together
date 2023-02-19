@@ -4,6 +4,7 @@ import android.net.Uri
 import android.util.Log
 import com.devmo.together.helpers.Resource
 import com.devmo.together.models.DemandPost
+import com.devmo.together.models.HomePost
 import com.devmo.together.models.SupportPost
 import com.devmo.together.models.User
 import com.google.firebase.auth.FirebaseAuth
@@ -47,6 +48,33 @@ class HomeRepo(
             e.printStackTrace()
             emit(e.localizedMessage?.let { Resource.error(null, it) })
         }
+    }.flowOn(Dispatchers.IO)
+
+    suspend fun createHomePost(post: HomePost) = flow {
+        emit(Resource.loading(null))
+        try {
+            val user = getUsers()?.getValue<User>()
+            val reference = mDatabase.getReference("$supportPost/${mAuth.currentUser?.uid}")
+            val oldPost = reference.get().await().getValue<SupportPost>()
+            if (user != null && oldPost != null) {
+                post.id = user.id
+                post.name = user.name
+                post.userImg = user.imageURL
+                post.location = oldPost.location
+                reference.removeValue()
+                val task = mDatabase.getReference("homePosts")
+                    .child("${mAuth.currentUser?.uid}").setValue(post)
+                task.await()
+                if (task.isSuccessful) {
+                    emit(Resource.success("posted"))
+                }
+            } else {
+                emit(Resource.error(null, "something went wrong!"))
+            }
+        } catch (e: Exception) {
+            emit(e.localizedMessage?.let { Resource.error(null, it) })
+        }
+
     }.flowOn(Dispatchers.IO)
 
     suspend fun createSupportPost(post: SupportPost, uri: Uri) = flow {
@@ -206,7 +234,22 @@ class HomeRepo(
         }
     }.flowOn(Dispatchers.IO)
 
-    suspend fun updateUserPic(uri: Uri) {
-        TODO("update the img in the posts if exists")
-    }
+    suspend fun updateUserPic(uri: Uri) = flow {
+        emit(Resource.loading(null))
+        try {
+            val reference = mStorage.getReference("images/profile/${mAuth.currentUser?.uid}")
+            val uploadTask = reference.putFile(uri)
+            uploadTask.await()
+            val img = reference.downloadUrl.await().toString()
+            val value = mDatabase.getReference("users/${mAuth.currentUser?.uid}/imageURL")
+                .setValue(img)
+            value.await()
+            if (value.isSuccessful) {
+                emit(Resource.success(img))
+            }
+        } catch (e: Exception) {
+            emit(e.localizedMessage?.let { Resource.error(null, it) })
+        }
+
+    }.flowOn(Dispatchers.IO)
 }

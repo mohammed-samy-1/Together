@@ -61,6 +61,7 @@ class SplashFragment : Fragment() {
                     findNavController().navigate(R.id.action_splashFragment_to_logInFragment)
                 }else{
                     startActivity(Intent(requireContext() , HomeActivity::class.java))
+                    requireActivity().finish()
                 }
             }
         }

@@ -1,5 +1,7 @@
 package com.devmo.together.ui.adapters
 
+import android.content.Intent
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
@@ -40,8 +42,14 @@ class SupportPotAdapter(private val onAction: (SupportPost)-> Unit) : ListAdapte
             binding.txtGennder.text = post.gender
             binding.txtRooms.text = post.rooms.toString()
             binding.txtPpl.text = post.people.toString()
-            binding.btnRequest.setOnClickListener {
-                onClick(post)
+//            binding.btnRequest.setOnClickListener {
+//                onClick(post)
+//            }
+            binding.txtPhone.setOnClickListener{
+                val intent = Intent(Intent.ACTION_DIAL).apply {
+                    data = Uri.parse("tel:${post.phone}")
+                }
+                binding.root.context.startActivity(intent)
             }
         }
     }

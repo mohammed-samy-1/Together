@@ -49,5 +49,14 @@
         android:id="@+id/profileFragment"
         android:name="com.devmo.together.ui.home.ui.profile.ProfileFragment"
         android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_completePosttFragment"
+            app:destination="@id/completePosttFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/completePosttFragment"
+        android:name="com.devmo.together.ui.home.ui.profile.CompletePosttFragment"
+        android:label="fragment_complete_postt"
+        tools:layout="@layout/fragment_complete_postt" />
 </navigation>

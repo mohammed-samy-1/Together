@@ -3,11 +3,11 @@ package com.devmo.together.models
 import android.graphics.drawable.AnimatedImageDrawable
 
 data class HomePost(
-    val  id : String = "" ,
-    val name :String = "" ,
-    val userImg :String = "" ,
-    val postBody : String = "" ,
-    val postImage : String = "" ,
+    var  id : String = "" ,
+    var name :String = "" ,
+    var userImg :String = "" ,
+    var postBody : String = "" ,
+    var postImage : String = "" ,
     val bankAccount : String = "" ,
-    val location : String = ""
+    var location : String = ""
 )

@@ -1,5 +1,7 @@
 package com.devmo.together.ui.adapters
 
+import android.content.Intent
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
@@ -35,7 +37,12 @@ class DemandPostAdapter : ListAdapter<DemandPost, DemandPostAdapter.PostHolder>(
             Glide.with(binding.root.context)
                 .load(post.postImage)
                 .into(binding.imgPost)
-
+            binding.txtPhone.setOnClickListener{
+                val intent = Intent(Intent.ACTION_DIAL).apply {
+                    data = Uri.parse("tel:${post.phone}")
+                }
+                binding.root.context.startActivity(intent)
+            }
         }
     }
 
