@@ -18,6 +18,7 @@ import com.devmo.together.databinding.FragmentCreateDemandPostBinding
 import com.devmo.together.helpers.Status
 import com.devmo.together.models.DemandPost
 import com.devmo.together.models.SupportPost
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 @AndroidEntryPoint
@@ -33,6 +34,8 @@ class CreateDemandPostFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        val nav = requireActivity().findViewById<BottomNavigationView>(R.id.nav_view)
+        nav.visibility = View.GONE
         launcher = registerForActivityResult(ActivityResultContracts.GetContent()) {
             uri = it
             binding.txtImgPath.text = uri?.path
@@ -104,4 +107,9 @@ class CreateDemandPostFragment : Fragment() {
         }
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        val nav = requireActivity().findViewById<BottomNavigationView>(R.id.nav_view)
+        nav.visibility = View.VISIBLE
+    }
 }

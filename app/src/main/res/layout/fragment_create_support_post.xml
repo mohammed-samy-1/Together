@@ -105,7 +105,7 @@
                     android:textSize="@dimen/_10ssp" />
 
                 <Space
-                    android:layout_width="@dimen/_5sdp"
+                    android:layout_width="@dimen/_2sdp"
                     android:layout_height="wrap_content" />
 
                 <FrameLayout
@@ -122,7 +122,7 @@
                 </FrameLayout>
 
                 <Space
-                    android:layout_width="@dimen/_5sdp"
+                    android:layout_width="@dimen/_2sdp"
                     android:layout_height="match_parent" />
 
                 <ImageView
@@ -139,7 +139,7 @@
                     android:textSize="@dimen/_10ssp" />
 
                 <Space
-                    android:layout_width="@dimen/_5sdp"
+                    android:layout_width="@dimen/_1sdp"
                     android:layout_height="wrap_content" />
 
                 <FrameLayout
@@ -235,7 +235,7 @@
                 android:background="@drawable/input_bg"
                 android:gravity="start"
                 android:importantForAutofill="no"
-                android:inputType="text"
+                android:inputType="textMultiLine"
                 android:textSize="@dimen/_15ssp"
                 tools:ignore="LabelFor" />
 

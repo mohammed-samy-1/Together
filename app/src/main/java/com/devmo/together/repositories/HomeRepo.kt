@@ -50,17 +50,23 @@ class HomeRepo(
         }
     }.flowOn(Dispatchers.IO)
 
-    suspend fun createHomePost(post: HomePost) = flow {
+    suspend fun createHomePost(post: HomePost, uri: Uri) = flow {
         emit(Resource.loading(null))
         try {
             val user = getUsers()?.getValue<User>()
             val reference = mDatabase.getReference("$supportPost/${mAuth.currentUser?.uid}")
             val oldPost = reference.get().await().getValue<SupportPost>()
+            // TODO: upload the img
+            val imgRef = mStorage.getReference("images/support/${mAuth.currentUser?.uid}")
+            val uploadTask = imgRef.putFile(uri)
+            uploadTask.await()
+            val img = imgRef.downloadUrl.await().toString()
             if (user != null && oldPost != null) {
                 post.id = user.id
                 post.name = user.name
                 post.userImg = user.imageURL
                 post.location = oldPost.location
+                post.postImage = img
                 reference.removeValue()
                 val task = mDatabase.getReference("homePosts")
                     .child("${mAuth.currentUser?.uid}").setValue(post)
@@ -75,6 +81,20 @@ class HomeRepo(
             emit(e.localizedMessage?.let { Resource.error(null, it) })
         }
 
+    }.flowOn(Dispatchers.IO)
+
+    suspend fun getHomePosts() = flow {
+        emit(Resource.loading(null))
+        try {
+            val children = mDatabase.getReference("homePosts").get().await().children
+            val posts = mutableListOf<HomePost>()
+            for (i in children){
+                i.getValue(HomePost::class.java)?.let { posts.add(it) }
+            }
+            emit(Resource.success(posts))
+        } catch (e: Exception) {
+            emit(e.localizedMessage?.let { Resource.error(null, it) })
+        }
     }.flowOn(Dispatchers.IO)
 
     suspend fun createSupportPost(post: SupportPost, uri: Uri) = flow {

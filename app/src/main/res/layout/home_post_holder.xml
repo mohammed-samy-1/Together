@@ -83,6 +83,7 @@
             android:layout_height="@dimen/_200sdp"
             android:layout_marginTop="@dimen/_10sdp"
             android:contentDescription="@null"
+            android:scaleType="centerCrop"
             tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
         <TextView

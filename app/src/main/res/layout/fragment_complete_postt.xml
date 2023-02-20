@@ -56,11 +56,12 @@
                         android:textSize="@dimen/_14ssp" />
 
                     <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/ccl_getImg"
+                        android:id="@+id/get_img"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_10sdp"
-                        android:background="@drawable/input_bg">
+                        android:background="@drawable/input_bg"
+                        android:clickable="true">
 
                         <TextView
                             android:id="@+id/txt_img"
@@ -72,7 +73,6 @@
                             app:layout_constraintTop_toTopOf="parent" />
 
                         <ImageView
-                            android:id="@+id/imageView6"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="24dp"
@@ -115,6 +115,7 @@
                         android:textSize="@dimen/_14ssp" />
 
                     <Button
+                        android:id="@+id/btn"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"

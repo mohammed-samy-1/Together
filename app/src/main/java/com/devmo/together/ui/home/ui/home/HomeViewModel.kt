@@ -10,5 +10,5 @@ import javax.inject.Inject
 
 @HiltViewModel
 class HomeViewModel @Inject constructor(private val repo: HomeRepo) : ViewModel() {
-
+    suspend fun getPosts() = repo.getHomePosts()
 }
