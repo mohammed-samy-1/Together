@@ -18,6 +18,10 @@
         tools:layout="@layout/fragment_support" >
         <action
             android:id="@+id/action_navigation_dashboard_to_createSupportPostFragment"
+            app:enterAnim="@anim/enter_anim"
+            app:exitAnim="@anim/exit_anim"
+            app:popEnterAnim="@anim/pop_exit_anim"
+            app:popExitAnim="@anim/pop_enter_anim"
             app:destination="@id/createSupportPostFragment" />
     </fragment>
 
@@ -38,6 +42,10 @@
         tools:layout="@layout/fragment_demand" >
         <action
             android:id="@+id/action_demandFragment_to_createDemandPostFragment"
+            app:enterAnim="@anim/enter_anim"
+            app:exitAnim="@anim/exit_anim"
+            app:popEnterAnim="@anim/pop_exit_anim"
+            app:popExitAnim="@anim/pop_enter_anim"
             app:destination="@id/createDemandPostFragment" />
     </fragment>
     <fragment
@@ -52,11 +60,39 @@
         tools:layout="@layout/fragment_profile" >
         <action
             android:id="@+id/action_profileFragment_to_completePosttFragment"
+            app:enterAnim="@anim/enter_anim"
+            app:exitAnim="@anim/exit_anim"
+            app:popEnterAnim="@anim/pop_exit_anim"
+            app:popExitAnim="@anim/pop_enter_anim"
             app:destination="@id/completePosttFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_guideFragment"
+            app:enterAnim="@anim/enter_anim"
+            app:exitAnim="@anim/exit_anim"
+            app:popEnterAnim="@anim/pop_exit_anim"
+            app:popExitAnim="@anim/pop_enter_anim"
+            app:destination="@id/guideFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_supportUsFragment"
+            app:enterAnim="@anim/enter_anim"
+            app:exitAnim="@anim/exit_anim"
+            app:popEnterAnim="@anim/pop_exit_anim"
+            app:popExitAnim="@anim/pop_enter_anim"
+            app:destination="@id/supportUsFragment" />
     </fragment>
     <fragment
         android:id="@+id/completePosttFragment"
         android:name="com.devmo.together.ui.home.ui.profile.CompletePosttFragment"
         android:label="fragment_complete_postt"
         tools:layout="@layout/fragment_complete_postt" />
+    <fragment
+        android:id="@+id/guideFragment"
+        android:name="com.devmo.together.ui.home.ui.profile.GuideFragment"
+        android:label="fragment_guide"
+        tools:layout="@layout/fragment_guide" />
+    <fragment
+        android:id="@+id/supportUsFragment"
+        android:name="com.devmo.together.ui.home.ui.profile.SupportUsFragment"
+        android:label="fragment_support_us"
+        tools:layout="@layout/fragment_support_us" />
 </navigation>

@@ -21,7 +21,6 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
             FirebaseDatabase.getInstance().getReference("tokens/${FirebaseAuth
                 .getInstance().currentUser?.uid}")
                 .setValue(token)
-        Toast.makeText(this, token, Toast.LENGTH_LONG).show()
     }
     override fun onMessageReceived(remoteMessage: RemoteMessage) {
         super.onMessageReceived(remoteMessage)

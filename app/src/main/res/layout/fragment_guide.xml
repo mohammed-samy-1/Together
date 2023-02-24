@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/secondary_color"
+    tools:context=".ui.home.ui.profile.GuideFragment">
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:text="@string/application_guide"
+        android:textColor="@color/primary_color"
+        android:textSize="@dimen/_25sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_home"
+                android:textColor="@color/primary_color"
+                android:textSize="@dimen/_20sdp"
+                app:drawableStartCompat="@drawable/ic_home_black_24dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:lineSpacingExtra="1dp"
+                android:text="@string/guide_home"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/_1sdp"
+                android:text="@string/support"
+                android:textColor="@color/primary_color"
+                android:textSize="@dimen/_20sdp"
+                app:drawableStartCompat="@drawable/supportfelled" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:lineSpacingExtra="1dp"
+                android:text="@string/guide_support"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/_1sdp"
+                android:text="@string/demand"
+                android:textColor="@color/primary_color"
+                android:textSize="@dimen/_20sdp"
+                app:drawableStartCompat="@drawable/hands_holding_child_solid" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:lineSpacingExtra="1dp"
+                android:text="@string/guide_support"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/_1sdp"
+                android:text="@string/profile"
+                android:textColor="@color/primary_color"
+                android:textSize="@dimen/_20sdp"
+                app:drawableStartCompat="@drawable/profile_felled" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:lineSpacingExtra="1dp"
+                android:text="@string/guide_profile"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/_1sdp"
+                android:text="@string/important_notes"
+                android:textColor="@color/primary_color"
+                android:textSize="@dimen/_20sdp"
+                app:drawableStartCompat="@drawable/baseline_import_contacts_24" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:lineSpacingExtra="1dp"
+                android:text="@string/guide_notes"
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginBottom="@dimen/_50sdp"/>
+
+            <Button
+                android:id="@+id/btn_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/next"
+                android:textSize="@dimen/_16ssp"
+                android:visibility="gone" />
+                
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_60sdp"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

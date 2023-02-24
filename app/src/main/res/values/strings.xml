@@ -1,8 +1,7 @@
 <resources>
     <string name="app_name">Together</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="sp_text"><font color='#2460B9'>{</font>Together<font color='#2460B9'>}</font> we can face....\nDISASTERS</string>
+    <string name="sp_text" translatable="false"><font color='#2460B9'>{</font>Together<font color='#2460B9'>}</font> we can face....\nDISASTERS</string>
     <string name="sp_text_2">A believer is like a brick for another believer, the one supporting the other.</string>
     <string name="welcome">Welcome</string>
     <string name="enter_your_email_and_password">Enter your email and password</string>
@@ -15,13 +14,13 @@
     <string name="sign_up">Sign Up</string>
     <string name="create_naccount">Create \nAccount :)</string>
     <string name="already_have_account_login">Already have account ? <u><font color='#2460B9'>Login</font></u></string>
-    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_activity_home" translatable="false">HomeActivity</string>
     <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_dashboard" translatable="false">Dashboard</string>
+    <string name="title_notifications" translatable="false">Notifications</string>
     <string name="support">Support</string>
     <string name="demand">Demand</string>
-    <string name="user_image">user image</string>
+    <string name="user_image" translatable="false">user image</string>
     <string name="location">Location : </string>
     <string name="bank_account">Bank Account : </string>
     <string name="phone">Phone : </string>
@@ -32,8 +31,6 @@
     <string name="upload_picture">Upload picture</string>
     <string name="Description">Discreption</string>
     <string name="publish">publish</string>
-    <string name="email1">Email :</string>
-    <string name="password1">Password :</string>
     <string name="complete">Complete</string>
     <string name="hints_1">you have to attach picture of you with the people you have hosted</string>
     <string name="hints_2">Set up a method of payment to facilitate support for you to help with hosting expenses</string>
@@ -41,6 +38,47 @@
     <string name="notifications">Notifications</string>
     <string name="request">Request</string>
     <string name="log_out">Log out</string>
+    <string name="application_guide">Application guide</string>
+
+
+    <string name="guide_home">In this page posts are created when a user hosts people in his/her house\n
+\nBy providing the following data :-
+\n- Picture with the people they hosted : To encourage other users to help someone if they can
+\n- Bank account : To let other people help with hosting expediences or to support the hosted people
+    </string>
+    <string name="guide_support">In this page the people who has extra space in their houses can create a post to host other people
+\n\n
+<pre>By providing the following data :-
+\n- Location : To let the people need hosting know where are they before start communicating
+\n- Picture of the house or the room
+\n- Phone number : For communication
+\n- Number of rooms available
+\n- Number of people he/she can host
+\n- Description : To provide extra information or a message to the guests
+</pre></string>
+    <string name="guide_demand">In this page the people who need help can post to request supplies such as food clothes etc..
+\n\n
+By providing the following data :-
+\n- Location : To let the people wants to help know where they are
+\n- Picture explains the reason of the request : To encourage people to help
+\n- Phone number : For communication
+\n- Description : To provide information about what they need help with
+</string>
+    <string name="guide_profile">In this page showing :-
+\n\n
+\n- profile image : You can select new one by pressing the image
+\n- name : the name you entered while creating the account
+\n- support post : it will appear only if you created a post and you can either complete or delete it
+\n- demand post : It will appear only if you created a post and you can delete it
+\n- log out
+</string>
+    <string name="guide_notes">
+\n1- Every user can create only one post in each page
+\n2- If you want to edit a post you can create new one and it will replace the old one
+\n3- phone numbers and bank accounts are clickable
+</string>
+    <string name="important_notes">Important notes</string>
+    <string name="next">Next</string>
 
     <string-array name="numbers">
         <item>1</item>
@@ -59,4 +97,13 @@
         <item>Male</item>
         <item>Female</item>
     </string-array>
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="support_us">Support Us</string>
+    <string name="likte_the_app">if you like the app you can help us with</string>
+    <string name="s1">- creating IOS version</string>
+    <string name="s2">- adding new features</string>
+    <string name="s3">- hosting the database</string>
+    <string name="paypal" translatable="false">Paypal</string>
+    <string name="num" translatable="false">+201551534883</string>
+    <string name="contact_us">Contact us</string>
 </resources>

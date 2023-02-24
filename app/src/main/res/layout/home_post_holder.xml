@@ -5,12 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="@dimen/_5sdp"
+    android:layout_marginTop="@dimen/_5sdp"
+    android:layout_marginBottom="@dimen/_5sdp"
     app:cardCornerRadius="@dimen/_15sdp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingTop="@dimen/_5sdp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -119,6 +122,7 @@
                 android:id="@+id/txt_acc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/primary_color"
                 android:text="0000000000000"
                 android:textSize="@dimen/_10ssp" />
         </LinearLayout>

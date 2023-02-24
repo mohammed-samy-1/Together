@@ -1,7 +1,12 @@
 package com.devmo.together.ui.adapters
 
+import android.content.ClipData
+import android.content.ClipboardManager
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.core.content.ContextCompat.getSystemService
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
@@ -35,7 +40,12 @@ class HomePostAdapter() : ListAdapter<HomePost, HomePostAdapter.PostHolder>(Comp
             Glide.with(binding.root.context)
                 .load(post.postImage)
                 .into(binding.imgPost)
-
+            binding.txtAcc.setOnClickListener{
+                val clipboardManager = binding.root.context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+                val clipData = ClipData.newPlainText("text", post.bankAccount)
+                clipboardManager.setPrimaryClip(clipData)
+                Toast.makeText(binding.root.context , "text copied" , Toast.LENGTH_SHORT).show()
+            }
         }
     }
 

@@ -39,15 +39,11 @@ class SplashFragment : Fragment() {
         val sharedPreferences =
             requireActivity().getSharedPreferences(Helpers.preferencesName, Context.MODE_PRIVATE)
         binding.btnGetStarted.setOnClickListener {
-            findNavController().navigate(R.id.action_splashFragment_to_logInFragment)
+            findNavController().navigate(R.id.action_splashFragment_to_guideFragment2)
             sharedPreferences.edit().putBoolean("first_time", false).apply()
         }
     }
 
-    override fun onStart() {
-        super.onStart()
-
-    }
 
     override fun onResume() {
         super.onResume()

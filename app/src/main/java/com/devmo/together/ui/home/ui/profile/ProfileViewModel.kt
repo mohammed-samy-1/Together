@@ -12,4 +12,6 @@ class ProfileViewModel @Inject constructor(private val repo: HomeRepo): ViewMode
     suspend fun getSupportPost() = repo.getSupportPost()
     suspend fun getDemandPost() = repo.getDemandPost()
     suspend fun uploadProfilePic(uri: Uri) = repo.updateUserPic(uri)
+    suspend fun removeSupport() = repo.removeSupportPost()
+    suspend fun removeDemand() = repo.removeDemandPost()
 }

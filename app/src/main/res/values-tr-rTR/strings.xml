@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Together</string>
+    <string name="sp_text_2">Birlikte felaketlerle yüzleşebiliriz. Mümin diğer bir mümin için tuğla gibidir, biri diğerini destekler.</string>
+    <string name="welcome">Hoş geldin</string>
+    <string name="enter_your_email_and_password">E-postanızı ve şifrenizi giriniz.</string>
+    <string name="email">E-posta</string>
+    <string name="password">Şifre</string>
+    <string name="login">Giriş Yap</string>
+    <string name="forgot_password"><u>Şifrenizi mi unuttunuz?</u></string>
+    <string name="no_account">Hesabınız yok mu? <u><font color='#2460B9'>Kaydolun</font></u></string>
+    <string name="name">İsim</string>
+    <string name="sign_up">Kaydol</string>
+    <string name="create_naccount">Hesap Oluştur</string>
+    <string name="already_have_account_login">Çoktan hesabın var mı? Giriş yap.</string>
+    <string name="title_home">Anasayfa</string>
+    <string name="support">talep</string>
+    <string name="demand">istek</string>
+    <string name="location">"Konum : "</string>
+    <string name="bank_account">"banka hesabı : "</string>
+    <string name="phone">"Telefon "</string>
+    <string name="gender">"cinsiyet : "</string>
+    <string name="rooms">"odalar : "</string>
+    <string name="people">"kişiler : "</string>
+    <string name="upload_picture">Fotoğraf yükle</string>
+    <string name="Description">açıklama</string>
+    <string name="publish">oluştur</string>
+    <string name="complete">Tamamla</string>
+    <string name="hints_1">ağırladığınız kişilerle birlikte resminizi eklemelisiniz</string>
+    <string name="hints_2">Set up a method of payment to facilitate support for you to help with hosting expenses</string>
+    <string name="profile">Profil</string>
+    <string name="notifications">Notifications</string>
+    <string name="request">Rica etmek</string>
+    <string name="log_out">Çıkış yap</string>
+    <string name="female">dişi</string>
+
+
+    <string name="application_guide">Başvuru rehberi</string>
+    <string name="guide_home">Bu sayfada gönderiler, bir kullanıcı evinde misafir ağırladığını oluşturulur.\n
+\nAşağıdaki verileri sağlayarak :-
+\n- Ağırladıkları kişilerle resim : Diğer kullanıcıları, mümkünse birine yardım etmeye teşvik etmek için
+\n- banka hesabı : Diğer kişilerin ev sahipliği konusunda yardım etmesine izin vermek veya barındırılan kişileri desteklemek
+    </string>
+    <string name="guide_demand">bu sayfada yardıma ihtiyacı olan kişiler malzeme talep edebilir
+\n\n
+Aşağıdaki verileri sağlayarak :-
+\n- Konum : İnsanların nerede olduklarını bilmelerine yardımcı olmak istemelerine izin vermek için
+\n- Resim, isteğin nedenini açıklıyor : İnsanları yardım etmeye teşvik etmek
+\n- Telefon numarası : İletişim için
+\n- Tanım : Hangi konuda yardıma ihtiyaç duydukları hakkında bilgi sağlamak için
+</string>
+    <string name="guide_support">In this page the people who has extra space in their houses can create a post to host other people
+\n\n
+<pre>Aşağıdaki verileri sağlayarak :-
+\n- Konum : To let the people need hosting know where are they before start communicating
+\n- Evin veya odanın resmi
+\n- Telefon numarası : Fİletişim için
+\n- Mevcut oda sayısı
+\n- Ağırlayabileceği kişi sayısı
+\n- Tanım : Misafirlere ekstra bilgi veya mesaj vermek için
+</pre></string>
+
+    <string name="guide_profile">Bu sayfada gösterilen :-
+\n\n
+\n- profil resmi : Resme basarak yenisini seçebilirsiniz
+\n- isim : hesabı oluştururken girdiğiniz ad
+\n- destek gönderileri : yalnızca bir gönderi oluşturduysanız görünür ve onu tamamlayabilir veya silebilirsiniz.
+\n- talep gönderileri : Yalnızca bir gönderi oluşturduysanız görünür ve onu silebilirsiniz.
+\n- çıkış Yap
+</string>
+
+    <string name="guide_notes">
+\n1- Her kullanıcı, her sayfada yalnızca bir gönderi oluşturabilir
+\n2- Bir gönderiyi düzenlemek istiyorsanız, yeni bir gönderi oluşturabilirsiniz ve bu, eskisinin yerini alacaktır.
+\n3- telefon numaraları ve banka hesapları tıklanabilir
+</string>
+
+
+    <string name="important_notes">Önemli notlar</string>
+    <string name="next">Sonraki-</string>
+    <string name="support_us">Bizi destekle</string>
+    <string name="likte_the_app">uygulamayı beğendiyseniz bize yardımcı olabilirsiniz</string>
+    <string name="s1">- IOS versiyonu oluşturma</string>
+    <string name="s2">- yeni özellikler eklemek</string>
+    <string name="s3">- veritabanı barındırma</string>
+    <string name="contact_us">Bize Ulaşın</string>
+</resources>

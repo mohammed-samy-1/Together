@@ -100,6 +100,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/_5sdp"
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -192,6 +193,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
                         android:gravity="center_vertical"
                         android:orientation="horizontal"
                         android:paddingStart="@dimen/_10sdp"
@@ -242,6 +244,7 @@
                         android:paddingEnd="@dimen/_30sdp">
 
                         <ImageView
+                            android:id="@+id/img_del"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/_100sdp"
@@ -262,16 +265,41 @@
                 android:visibility="gone" />
 
             <TextView
+                android:id="@+id/txt_guide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:drawablePadding="@dimen/_5sdp"
+                android:gravity="center_vertical"
+                android:text="@string/application_guide"
+                android:textColor="@color/primary_color"
+                android:textSize="@dimen/_16ssp"
+                app:drawableStartCompat="@drawable/baseline_help_24" />
+            <TextView
+                android:id="@+id/txt_support_us"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:drawablePadding="@dimen/_5sdp"
+                android:gravity="center_vertical"
+                android:text="@string/support_us"
+                android:textColor="@color/primary_color"
+                android:textSize="@dimen/_16ssp"
+                app:drawableStartCompat="@drawable/circle_dollar_to_slot_solid" />
+            <TextView
                 android:id="@+id/txt_logout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_10sdp"
-                android:drawableStart="@drawable/baseline_logout_24"
                 android:drawablePadding="@dimen/_5sdp"
                 android:gravity="center_vertical"
                 android:text="@string/log_out"
                 android:textColor="@color/primary_color"
-                android:textSize="@dimen/_16ssp" />
+                android:textSize="@dimen/_16ssp"
+                app:drawableStartCompat="@drawable/baseline_logout_24" />
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_10sdp"/>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

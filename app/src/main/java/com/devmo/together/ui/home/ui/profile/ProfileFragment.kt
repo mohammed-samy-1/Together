@@ -1,5 +1,6 @@
 package com.devmo.together.ui.home.ui.profile
 
+import android.content.Intent
 import android.net.Uri
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -17,6 +18,7 @@ import com.bumptech.glide.Glide
 import com.devmo.together.R
 import com.devmo.together.databinding.FragmentProfileBinding
 import com.devmo.together.helpers.Status
+import com.devmo.together.ui.auth.MainActivity
 import com.google.firebase.auth.FirebaseAuth
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collect
@@ -54,9 +56,70 @@ class ProfileFragment : Fragment() {
         }
         binding.txtLogout.setOnClickListener{
             FirebaseAuth.getInstance().signOut()
+            requireContext().startActivity(Intent(requireContext(),  MainActivity::class.java))
         }
         binding.btnComp.setOnClickListener {
             findNavController().navigate(R.id.action_profileFragment_to_completePosttFragment)
+        }
+        binding.txtGuide.setOnClickListener{
+            findNavController().navigate(R.id.action_profileFragment_to_guideFragment)
+        }
+        binding.txtSupportUs.setOnClickListener{
+            findNavController().navigate(R.id.action_profileFragment_to_supportUsFragment)
+        }
+        binding.imgDelSupport.setOnClickListener {
+            deleteSupport()
+        }
+        binding.imgDel.setOnClickListener {
+            deleteDemand()
+        }
+    }
+
+    private fun deleteDemand() {
+        lifecycleScope.launch{
+            viewModel.removeDemand().collect{
+                when(it?.status){
+                    Status.SUCCESS->{
+                        binding.demandPostProfile.visibility = View.GONE
+                        Toast.makeText(binding.root.context , "post deleted" , Toast.LENGTH_SHORT).show()
+                    }
+                    Status.LOADING -> {
+                        binding.progressBar4.visibility = View.VISIBLE
+                    }
+                    Status.ERROR -> {
+                        binding.progressBar4.visibility = View.GONE
+                        Toast.makeText(requireContext() , it.message , Toast.LENGTH_LONG).show()
+                    }
+                    else -> {
+                        binding.demandPostProfile.visibility = View.GONE
+                        return@collect
+                    }
+                }
+            }
+        }
+    }
+
+    private fun deleteSupport() {
+        lifecycleScope.launch{
+            viewModel.removeSupport().collect{
+                when(it?.status){
+                    Status.SUCCESS->{
+                        binding.supportPostProfile.visibility = View.GONE
+                        Toast.makeText(binding.root.context , "post deleted" , Toast.LENGTH_SHORT).show()
+                    }
+                    Status.LOADING -> {
+                        binding.progressBar4.visibility = View.VISIBLE
+                    }
+                    Status.ERROR -> {
+                        binding.progressBar4.visibility = View.GONE
+                        Toast.makeText(requireContext() , it.message , Toast.LENGTH_LONG).show()
+                    }
+                    else -> {
+                        binding.supportPostProfile.visibility = View.GONE
+                        return@collect
+                    }
+                }
+            }
         }
     }
 

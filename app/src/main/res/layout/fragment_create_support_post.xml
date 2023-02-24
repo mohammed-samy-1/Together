@@ -105,13 +105,13 @@
                     android:textSize="@dimen/_10ssp" />
 
                 <Space
-                    android:layout_width="@dimen/_2sdp"
+                    android:layout_width="@dimen/_3sdp"
                     android:layout_height="wrap_content" />
 
                 <FrameLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/input_bg">
+                    android:background="@drawable/sp_bg">
 
                     <Spinner
                         android:id="@+id/sp_rooms"
@@ -122,7 +122,7 @@
                 </FrameLayout>
 
                 <Space
-                    android:layout_width="@dimen/_2sdp"
+                    android:layout_width="@dimen/_5sdp"
                     android:layout_height="match_parent" />
 
                 <ImageView
@@ -139,13 +139,13 @@
                     android:textSize="@dimen/_10ssp" />
 
                 <Space
-                    android:layout_width="@dimen/_1sdp"
+                    android:layout_width="@dimen/_2sdp"
                     android:layout_height="wrap_content" />
 
                 <FrameLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/input_bg">
+                    android:background="@drawable/sp_bg">
 
                     <Spinner
                         android:id="@+id/sp_people"
@@ -251,6 +251,9 @@
                 android:paddingBottom="@dimen/_10sdp"
                 android:text="@string/publish"
                 android:textSize="@dimen/_15ssp" />
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_20sdp"/>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 

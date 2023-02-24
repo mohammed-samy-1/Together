@@ -263,6 +263,18 @@ class HomeRepo(
             val img = reference.downloadUrl.await().toString()
             val value = mDatabase.getReference("users/${mAuth.currentUser?.uid}/imageURL")
                 .setValue(img)
+            val ref1 = mDatabase.getReference("$demandPost/${mAuth.currentUser?.uid}")
+            val ref2 = mDatabase.getReference("$supportPost/${mAuth.currentUser?.uid}")
+            val ref3 = mDatabase.getReference("homePosts/${mAuth.currentUser?.uid}")
+            if(ref1.get().await().exists()){
+                ref1.child("userImg").setValue(img)
+            }
+            if(ref2.get().await().exists()){
+                ref2.child("userImg").setValue(img)
+            }
+            if(ref3.get().await().exists()){
+                ref3.child("userImg").setValue(img)
+            }
             value.await()
             if (value.isSuccessful) {
                 emit(Resource.success(img))
@@ -270,6 +282,31 @@ class HomeRepo(
         } catch (e: Exception) {
             emit(e.localizedMessage?.let { Resource.error(null, it) })
         }
-
     }.flowOn(Dispatchers.IO)
+    suspend fun removeSupportPost()= flow {
+        emit(Resource.loading(null))
+        try {
+            val reference = mDatabase.getReference("$supportPost/${mAuth.currentUser?.uid}")
+            val task = reference.removeValue()
+            task.await()
+            if (task.isSuccessful){
+                emit(Resource.success("post deleted"))
+            }
+        }catch (e:Exception){
+            emit(e.localizedMessage?.let { Resource.error(null , it) })
+        }
+    }.flowOn(Dispatchers.IO)
+    suspend fun removeDemandPost()= flow {
+        emit(Resource.loading(null))
+        try {
+            val reference = mDatabase.getReference("$demandPost/${mAuth.currentUser?.uid}")
+            val task = reference.removeValue()
+            task.await()
+            if (task.isSuccessful){
+                emit(Resource.success("post deleted"))
+            }
+        }catch (e:Exception){
+            emit(e.localizedMessage?.let { Resource.error(null , it) })
+        }
+    }
 }
