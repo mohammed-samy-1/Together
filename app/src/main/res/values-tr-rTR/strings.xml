@@ -49,10 +49,10 @@ Aşağıdaki verileri sağlayarak :-
 \n- Telefon numarası : İletişim için
 \n- Tanım : Hangi konuda yardıma ihtiyaç duydukları hakkında bilgi sağlamak için
 </string>
-    <string name="guide_support">In this page the people who has extra space in their houses can create a post to host other people
+    <string name="guide_support">Bu sayfada, evinde fazladan yer olan kişiler, başkalarını ağırlamak için bir gönderi oluşturabilir.
 \n\n
 <pre>Aşağıdaki verileri sağlayarak :-
-\n- Konum : To let the people need hosting know where are they before start communicating
+\n- Konum : Barındırmaya ihtiyaç duyan kişilerin iletişim kurmaya başlamadan önce nerede olduklarını bilmelerini sağlamak için
 \n- Evin veya odanın resmi
 \n- Telefon numarası : Fİletişim için
 \n- Mevcut oda sayısı
@@ -84,4 +84,10 @@ Aşağıdaki verileri sağlayarak :-
     <string name="s2">- yeni özellikler eklemek</string>
     <string name="s3">- veritabanı barındırma</string>
     <string name="contact_us">Bize Ulaşın</string>
+    <string-array name="Genders">
+        <item>herhangi</item>
+        <item>Erkek</item>
+        <item>Kadın</item>
+    </string-array>
+    <string name="get_started">Başlamak</string>
 </resources>

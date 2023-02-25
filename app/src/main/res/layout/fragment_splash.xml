@@ -78,7 +78,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="@dimen/_12sdp"
-        android:text="Get Started"
+        android:text="@string/get_started"
         android:textAllCaps="false"
         android:textSize="@dimen/_20ssp"
         app:cornerRadius="@dimen/_10sdp"

@@ -79,7 +79,7 @@
         android:layout_marginStart="@dimen/_35sdp"
         android:layout_marginEnd="@dimen/_35sdp"
         android:padding="@dimen/_12sdp"
-        android:text="Get Started"
+        android:text="@string/get_started"
         android:textAllCaps="false"
         android:textSize="@dimen/_20ssp"
         app:cornerRadius="@dimen/_10sdp"

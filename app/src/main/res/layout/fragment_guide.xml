@@ -83,7 +83,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_5sdp"
                 android:lineSpacingExtra="1dp"
-                android:text="@string/guide_support"
+                android:text="@string/guide_demand"
                 android:textSize="@dimen/_12sdp" />
 
             <TextView

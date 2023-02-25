@@ -72,6 +72,7 @@ class LogInFragment : Fragment() {
                     binding.progressBar2.visibility = View.GONE
                     binding.constraintLayout.visibility = View.VISIBLE
                     startActivity(Intent(requireContext(), HomeActivity::class.java))
+                    activity?.finish()
                 }
                 else -> {
                     return@collect

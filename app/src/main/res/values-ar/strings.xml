@@ -1,7 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Together</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="sp_text" translatable="false"><font color='#2460B9'>{</font>Together<font color='#2460B9'>}</font> we can face....\nDISASTERS</string>
     <string name="sp_text_2">A believer is like a brick for another believer, the one supporting the other.</string>
     <string name="welcome">Welcome</string>
     <string name="enter_your_email_and_password">Enter your email and password</string>
@@ -14,13 +14,9 @@
     <string name="sign_up">Sign Up</string>
     <string name="create_naccount">Create \nAccount :)</string>
     <string name="already_have_account_login">Already have account ? <u><font color='#2460B9'>Login</font></u></string>
-    <string name="title_activity_home" translatable="false">HomeActivity</string>
     <string name="title_home">Home</string>
-    <string name="title_dashboard" translatable="false">Dashboard</string>
-    <string name="title_notifications" translatable="false">Notifications</string>
     <string name="support">Support</string>
     <string name="demand">Demand</string>
-    <string name="user_image" translatable="false">user image</string>
     <string name="location">Location : </string>
     <string name="bank_account">Bank Account : </string>
     <string name="phone">Phone : </string>
@@ -97,14 +93,12 @@ By providing the following data :-
         <item>Male</item>
         <item>Female</item>
     </string-array>
-<!-- TODO: Remove or change this placeholder text -->
+    <!-- TODO: Remove or change this placeholder text -->
     <string name="support_us">Support Us</string>
     <string name="likte_the_app">if you like the app you can help us with</string>
     <string name="s1">- creating IOS version</string>
     <string name="s2">- adding new features</string>
     <string name="s3">- hosting the database</string>
-    <string name="paypal" translatable="false">Paypal</string>
-    <string name="num" translatable="false">+201551534883</string>
     <string name="contact_us">Contact us</string>
     <string name="get_started">Get Started</string>
 </resources>
